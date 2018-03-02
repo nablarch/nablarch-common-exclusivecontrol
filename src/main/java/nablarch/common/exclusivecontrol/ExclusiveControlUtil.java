@@ -11,13 +11,13 @@ import nablarch.core.util.annotation.Published;
  * 排他制御用テーブルの操作は、{@link ExclusiveControlManager}に委譲する。
  * 本クラスで使用する{@link ExclusiveControlManager}のオブジェクトは
  * {@link SystemRepository}から"exclusiveControlManager"という名前で取得する。
+ * 
+ * {@link nablarch.common.dao.UniversalDao UniversalDao}を使用する場合には、
+ * このクラスではなく{@link nablarch.common.dao.UniversalDao UniversalDao}を使用して排他制御を行うこと。
  *
  * @see ExclusiveControlManager
  * @author Kiyohito Itoh
- * @deprecated 本クラスはNablarchバージョン5以降では非推奨となっている。
- * バージョン5以降で排他制御機能を利用する場合には、{@link nablarch.common.dao.UniversalDao}を利用すること。
  */
-@Deprecated
 public final class ExclusiveControlUtil {
     
     /** ExclusiveControlManagerのコンポーネント名 */
