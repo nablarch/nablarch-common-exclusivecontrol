@@ -1,16 +1,14 @@
 package nablarch.common.exclusivecontrol;
 
-import static org.hamcrest.CoreMatchers.sameInstance;
-import static org.junit.Assert.*;
+import nablarch.core.message.Message;
+import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-import nablarch.core.message.Message;
-
-import org.junit.Test;
-
-import mockit.Mocked;
+import static org.hamcrest.CoreMatchers.sameInstance;
+import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.mock;
 
 public class OptimisticLockExceptionTest {
     
@@ -28,8 +26,7 @@ public class OptimisticLockExceptionTest {
         }
     }
 
-    @Mocked
-    private Message message;
+    private final Message message = mock(Message.class);
 
 
     @Test
